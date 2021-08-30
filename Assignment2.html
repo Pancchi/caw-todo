@@ -3,65 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  margin-left: 200px;
-  margin-bottom: 200px;
-  margin-right: 200px;
-  min-width: 250px;
-}
 
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-}
-
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: rgb(190, 190, 190);
-  font-size: 25px;
-  transition: 0.2s;
-  
-}
-
-
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: rgb(148, 248, 118);
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the closeIcon button */
 .closeIcon {
   position: absolute;
   right: 0;
@@ -74,7 +16,7 @@ ul li.checked::before {
   color: white;
 }
 
-/* Style the header1 */
+
 .header1 {
    
  
@@ -83,14 +25,14 @@ ul li.checked::before {
   text-align: center;
 }
 
-/* Clear floats after the header1 */
+
 .header1:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Style the input */
+
 input {
   margin-left: 350px;
   border: 1px solid rgb(0, 0, 0) !important; 
@@ -104,7 +46,7 @@ input[type=text]:focus {
   background-color: lightblue;
 }
 
-/* Style the "Add" button */
+
 .button1 {
   padding: 10px;
   width: 10%;
@@ -121,6 +63,65 @@ input[type=text]:focus {
 .button1:hover {
   background-color: #bbb;
 }
+  body {
+  margin-left: 200px;
+  margin-bottom: 200px;
+  margin-right: 200px;
+  min-width: 250px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: rgb(190, 190, 190);
+  font-size: 25px;
+  transition: 0.2s;
+  
+}
+
+
+
+
+ul li:hover {
+  background: #ddd;
+}
+
+
+ul li.checked {
+  background: rgb(148, 248, 118);
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
 </style>
 </head>
 <body>
@@ -139,7 +140,7 @@ input[type=text]:focus {
 </ul>
 
 <script>
-// Create a "closeIcon" button and append it to each list item
+
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -160,7 +161,6 @@ for (i = 0; i < closeIcon.length; i++) {
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -168,7 +168,7 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-// Create a new list item when clicking on the "Add" button
+
 function addFoodItem() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
